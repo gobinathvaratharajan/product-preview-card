@@ -123,11 +123,11 @@ body {
     background-color: var(--clr--primary-800);
     color: var(--clr-neutral-100);
     gap: 1rem;
-    padding: 0.74rem 1.15rem;
+    padding: 0.35em 0.15em;
     border: 0;
     border-radius: 0.5rem;
     font-weight: var(--fw-bold);
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .button::before {
@@ -139,6 +139,16 @@ body {
 
 .button:is(:hover, :focus) {
     background-color: var(--clr-active-900);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .product {
@@ -169,6 +179,7 @@ body {
     font-family: var(--ff-base);
     font-weight: var(--fw-medium);
     text-transform: uppercase;
+    letter-spacing: 0.5rem;
 }
 
 .product__cta {
